@@ -4,8 +4,11 @@ export const Article = styled.article`
   background-color: var(--gray-800);
   border-radius: 4px;
   padding: 2.5rem;
-
   margin-bottom: 2rem;
+
+  @media (max-width: 768px) {
+      padding: 1rem;
+    }
 
   > header {
     display: flex;

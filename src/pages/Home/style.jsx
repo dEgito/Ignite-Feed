@@ -13,6 +13,10 @@ export const Wrapper = styled.div`
     background-color: var(--gray-900);
     align-items: flex-start;
     gap: 2rem;
-    padding: 2rem 3rem;
+    padding: 2rem 1rem;
     max-width: 70rem;
+
+    @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+    }
 `;
