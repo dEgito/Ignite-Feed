@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Aside = styled.aside`
   background-color: var(--gray-800);
-  border-radius: 8px;
+  border-radius: 4px;
   overflow: hidden;
 
   footer {
