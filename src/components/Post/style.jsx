@@ -127,6 +127,4 @@ export const Icon = styled.img`
   outline: 2px solid var(--green-500);
 `;
 
-export const CommentList = styled.div `
-
-`;
+export const CommentList = styled.div``;

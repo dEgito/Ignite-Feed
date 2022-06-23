@@ -1,18 +1,14 @@
 import { Article, Author, Content, CommentList } from "./style";
 import { Icon } from "../Icon";
+import Avatar from "../../assets/profile.png";
 import { Comment } from "../Comment";
 
-interface PostProps {
-  author: string;
-  content: string;
-}
-
-export function Post(props: PostProps) {
+export function Post() {
   return (
     <Article>
       <header>
         <Author>
-          <Icon />
+          <Icon src={Avatar} />
 
           <div>
             <strong>Dani Egito</strong>
