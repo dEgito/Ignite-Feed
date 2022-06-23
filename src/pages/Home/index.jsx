@@ -1,6 +1,6 @@
 import { Header } from "../../components/Header";
 import { Post } from "../../components/Post/Post";
-import { SideBar } from "../../components/SideBar/indes";
+import { SideBar } from "../../components/SideBar";
 
 import { Container, Wrapper } from "./style";
 
