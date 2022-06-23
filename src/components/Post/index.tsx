@@ -1,5 +1,6 @@
-import { Article, Author, Content, Icon } from "./style";
-import Avatar from "../../assets/profile.png";
+import { Article, Author, Content, CommentList } from "./style";
+import { Icon } from "../Icon";
+import { Comment } from "../Comment";
 
 interface PostProps {
   author: string;
@@ -11,7 +12,7 @@ export function Post(props: PostProps) {
     <Article>
       <header>
         <Author>
-          <Icon src={Avatar} />
+          <Icon />
 
           <div>
             <strong>Dani Egito</strong>
@@ -51,6 +52,11 @@ export function Post(props: PostProps) {
           <button type="submit">Publicar</button>
         </footer>
       </form>
+
+      <CommentList>
+        <Comment />
+        <Comment />
+      </CommentList>
     </Article>
   );
 }
