@@ -42,6 +42,15 @@ export function Post(props: PostProps) {
           <a href="">#rocketseat</a>
         </p>
       </Content>
+
+      <form>
+        <strong>Deixe seu feedback</strong>
+
+        <textarea placeholder="Deixe um comentário" />
+        <footer>
+          <button type="submit">Publicar</button>
+        </footer>
+      </form>
     </Article>
   );
 }
