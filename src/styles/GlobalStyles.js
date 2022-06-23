@@ -28,6 +28,10 @@ const GlobalStyle = createGlobalStyle`
         box-sizing: border-box;
     }
 
+    html {
+        font-size: 87.5%;
+    }
+
     body {
         background-color: var(--gray-900);
         color: var(--gray-300);
