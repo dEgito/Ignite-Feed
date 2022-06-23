@@ -1,4 +1,4 @@
-import { Article, Author, Content, CommentList } from "./style";
+import { Article, Author, Content } from "./style";
 import { Icon } from "../Icon";
 import Avatar from "../../assets/profile.png";
 import { Comment } from "../Comment";
@@ -49,10 +49,10 @@ export function Post() {
         </footer>
       </form>
 
-      <CommentList>
+      <div>
         <Comment />
         <Comment />
-      </CommentList>
+      </div>
     </Article>
   );
 }

@@ -14,7 +14,7 @@ export const Aside = styled.aside`
       background: transparent;
       color: var(--green-500);
       border: 1px solid var(--green-500);
-      border-radius: 8px;
+      border-radius: 4px;
       height: 50px;
       padding: 0 1.5rem;
       font-weight: 600;
@@ -59,13 +59,3 @@ export const Cover = styled.img`
   object-fit: cover;
 `;
 
-export const Icon = styled.img`
-  /* box-sizing: initial; */
-  width: calc(3rem + 12px);
-  height: calc(3rem + 12px);
-  border-radius: 8px;
-  border: 4px solid var(--gray-800);
-
-  margin-top: -2rem;
-  outline: 2px solid var(--green-500);
-`;
