@@ -1,8 +1,5 @@
 import { Image } from "./style";
-import Avatar from "../../assets/profile.png";
 
-export function Icon () {
-    return (
-        <Image  src={Avatar}/>
-    )
+export function Icon({src, type}) {
+  return <Image type={type} src={src} />;
 }
