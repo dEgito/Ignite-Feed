@@ -9,6 +9,7 @@ export const Content = styled.header`
   padding: 1.25rem 0;
 
   background-color: var(--gray-800);
+  width: 100%;
   height: 80px;
   color: var(--white);
 
