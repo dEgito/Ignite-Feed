@@ -20,6 +20,8 @@ export const Article = styled.article`
 `;
 
 export const Content = styled.article`
+    display: flex;
+    flex-direction: column;
     line-height: 1.6;
     color: var(--gray-300);
     margin-top: 1.5rem;
