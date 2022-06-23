@@ -1,19 +1,21 @@
-import Cover from '../../assets/Cover.svg'
+import Cover from "../../assets/Cover.svg";
 
-import { Aside } from "./style"
+import { Aside, Profile } from "./style";
 
-export function SideBar(){
-    return(
-        <Aside>
-            <img src={Cover}/>
+export function SideBar() {
+  return (
+    <Aside>
+      <img src={Cover} />
 
-            <div>
-                perfil
-                <stong>Nome</stong>
-                <span>Cargo</span>
+      <Profile>
+        <img />
+        <stong>Danielly Egito</stong>
+        <span>Web Developer</span>
+      </Profile>
 
-                <a>Editar perfil</a>
-            </div>
-        </Aside>
-    )
+      <footer>
+        <a>Editar perfil</a>
+      </footer>
+    </Aside>
+  );
 }
