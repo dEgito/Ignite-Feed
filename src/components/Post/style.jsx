@@ -36,7 +36,7 @@ export const Article = styled.article`
       resize: none;
       height: 6rem;
       padding: 1rem;
-      border-radius: 8px;
+      border-radius: 4px;
       color: var(--gray-100);
       line-height: 1.4;
       margin-top: 1rem;
@@ -121,8 +121,12 @@ export const Author = styled.div`
 export const Icon = styled.img`
   width: calc(3rem + 12px);
   height: calc(3rem + 12px);
-  border-radius: 8px;
+  border-radius: 4px;
   border: 4px solid var(--gray-800);
 
   outline: 2px solid var(--green-500);
+`;
+
+export const CommentList = styled.div `
+
 `;
