@@ -5,12 +5,6 @@ export const Aside = styled.aside`
   border-radius: 8px;
   overflow: hidden;
 
-  img {
-    width: 100%;
-    height: 72px;
-    object-fit: cover;
-  }
-
   footer {
     border-top: 1px solid var(--gray-600);
     margin-top: 1.5rem;
@@ -30,6 +24,13 @@ export const Aside = styled.aside`
       display: flex;
       align-items: center;
       justify-content: center;
+      gap: 0.75rem;
+
+      &:hover {
+        background-color: var(--green-500);
+        color: var(--white);
+        transition: color 0.2s, background-color 0.2s;
+      }
     }
   }
 `;
@@ -38,4 +39,33 @@ export const Profile = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  strong {
+    margin-top: 1rem;
+    color: var(--gray-100);
+    line-height: 1.6;
+  }
+
+  span {
+    font-size: 0.875rem;
+    color: var(--gray-400);
+    line-height: 1.6;
+  }
+`;
+
+export const Cover = styled.img`
+  width: 100%;
+  height: 72px;
+  object-fit: cover;
+`;
+
+export const Icon = styled.img`
+  /* box-sizing: initial; */
+  width: calc(3rem + 12px);
+  height: calc(3rem + 12px);
+  border-radius: 8px;
+  border: 4px solid var(--gray-800);
+
+  margin-top: -2rem;
+  outline: 2px solid var(--green-500);
 `;
