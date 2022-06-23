@@ -117,14 +117,3 @@ export const Author = styled.div`
     }
   }
 `;
-
-export const Icon = styled.img`
-  width: calc(3rem + 12px);
-  height: calc(3rem + 12px);
-  border-radius: 4px;
-  border: 4px solid var(--gray-800);
-
-  outline: 2px solid var(--green-500);
-`;
-
-export const CommentList = styled.div``;

@@ -82,5 +82,3 @@ export const CommentContent = styled.div`
     color: var(--gray-300);
   }
 `;
-
-export const Author = styled.div``;
