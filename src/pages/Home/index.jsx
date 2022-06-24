@@ -21,18 +21,18 @@ const posts = [
       },
       { type: "link", content: "👉 jane.design/doctorcare" },
     ],
-    publishedAt: new Date("2022-06-23 08:53:00"),
+    publishedAt: new Date("2022-06-24 12:53:00"),
   },
 
   {
     id: 2,
     author: {
-      avatar: "https://github.com/diego3g.png",
-      name: "Clementina",
-      role: "UI Designer",
+      avatar: "https://github.com/JessyLeal.png",
+      name: "MicroJessy",
+      role: "Web Developer",
     },
     content: [
-      { type: "paragraph", content: "Fala galeraa 👋" },
+      { type: "paragraph", content: "Henlooo 👋" },
       {
         type: "paragraph",
         content:
