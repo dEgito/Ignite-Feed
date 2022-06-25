@@ -1,9 +1,10 @@
 import { Container, CommentBox, CommentContent } from "./style";
-import { ThumbsUp, Trash } from "phosphor-react";
 import { Icon } from "../Icon";
 import Avatar from "../../assets/profile.png";
 
-export function Comment() {
+import { ThumbsUp, Trash } from "phosphor-react";
+
+export function Comment({content}) {
   return (
     <Container>
       <Icon type='comment' src={Avatar} />
@@ -20,7 +21,7 @@ export function Comment() {
               <Trash size={24} />
             </button>
           </header>
-          <p>Top demais</p>
+          <p>{content}</p>
         </CommentContent>
 
         <footer>
