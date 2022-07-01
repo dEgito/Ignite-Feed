@@ -10,6 +10,7 @@ export function Post({ author, content, publishedAt }) {
   const [newCommentText, setNewCommentText] = useState("");
   const [comments, setComments] = useState(["post bacaninha"]);
 
+  //formatação da hora
   const publishedDateFormatted = format(
     publishedAt,
     "dd 'de' LLLL 'às' HH:mm'h'", //as aspas simples impede que o date-fns formate os textos
@@ -23,24 +24,34 @@ export function Post({ author, content, publishedAt }) {
     addSuffix: true, //adiciona o "há"
   });
 
+  //salva o que o usuário digitou e limpa a textarea
   function handleCreatNewComment() {
     event.preventDefault();
     setComments([...comments, newCommentText]);
     setNewCommentText("");
   }
 
+  //adiciona novo comentário
   function handleNewCommentChange() {
+    event.target.setCustomValidity(""); //reseta a mensagem de erro
     setNewCommentText(event.target.value);
   }
 
-  function deleteComment(commentToDelete) {
+  //validação da textarea
+  function handleNewCommentInvalid() {
+    event.target.setCustomValidity("Este campo é obrigatório"); //seta a mensagem de  erro
+  }
 
+  //deleta comentário
+  function deleteComment(commentToDelete) {
     const commentWithoutDeletedOne = comments.filter((comment) => {
       return comment !== commentToDelete;
     });
 
     setComments(commentWithoutDeletedOne);
   }
+
+  const isNewInputEnpty = newCommentText.length == 0
 
   return (
     <Article>
@@ -90,9 +101,13 @@ export function Post({ author, content, publishedAt }) {
           placeholder="Deixe um comentário"
           value={newCommentText}
           onChange={handleNewCommentChange}
+          onInvalid={handleNewCommentInvalid}
+          required
         />
         <footer>
-          <button type="submit">Publicar</button>
+          <button type="submit" disabled={isNewInputEnpty}>
+            Publicar
+          </button>
         </footer>
       </form>
 

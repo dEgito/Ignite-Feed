@@ -7,8 +7,8 @@ export const Article = styled.article`
   margin-bottom: 2rem;
 
   @media (max-width: 768px) {
-      padding: 1rem;
-    }
+    padding: 1rem;
+  }
 
   > header {
     display: flex;
@@ -61,9 +61,14 @@ export const Article = styled.article`
 
         /* display: none; Não é tão interessante por causa da acessibilidade, por isso usar o footer */
 
-        &:hover {
+        &:not(:disabled):hover {
           background-color: var(--green-300);
           transition: background-color 0.1s;
+        }
+
+        &:disabled {
+          opacity: 0.5;
+          cursor: not-allowed;
         }
       }
     }
