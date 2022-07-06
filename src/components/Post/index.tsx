@@ -4,9 +4,26 @@ import { Comment } from "../Comment";
 
 import { format, formatDistanceToNow } from "date-fns";
 import ptBR from "date-fns/locale/pt-BR";
-import { useState } from "react";
+import { ChangeEvent, FormEvent, InvalidEvent, useState } from "react";
 
-export function Post({ author, content, publishedAt }) {
+interface Author {
+  name: string;
+  role: string;
+  avatar: string;
+}
+
+interface Content {
+  type: 'paragraph' | 'link';
+  content: string;
+}
+
+interface PostProps {
+  author: Author;
+  content: Content[];
+  publishedAt: Date;
+}
+
+export function Post({ author, content, publishedAt }: PostProps) {
   const [newCommentText, setNewCommentText] = useState("");
   const [comments, setComments] = useState(["post bacaninha"]);
 
@@ -25,25 +42,25 @@ export function Post({ author, content, publishedAt }) {
   });
 
   //salva o que o usuário digitou e limpa a textarea
-  function handleCreatNewComment() {
+  function handleCreatNewComment(event: FormEvent) {
     event.preventDefault();
     setComments([...comments, newCommentText]);
     setNewCommentText("");
   }
 
   //adiciona novo comentário
-  function handleNewCommentChange() {
+  function handleNewCommentChange(event: ChangeEvent<HTMLTextAreaElement>) {
     event.target.setCustomValidity(""); //reseta a mensagem de erro
     setNewCommentText(event.target.value);
   }
 
   //validação da textarea
-  function handleNewCommentInvalid() {
+  function handleNewCommentInvalid(event: InvalidEvent<HTMLTextAreaElement>) {
     event.target.setCustomValidity("Este campo é obrigatório"); //seta a mensagem de  erro
   }
 
   //deleta comentário
-  function deleteComment(commentToDelete) {
+  function deleteComment(commentToDelete: string) {
     const commentWithoutDeletedOne = comments.filter((comment) => {
       return comment !== commentToDelete;
     });
@@ -51,7 +68,7 @@ export function Post({ author, content, publishedAt }) {
     setComments(commentWithoutDeletedOne);
   }
 
-  const isNewInputEnpty = newCommentText.length == 0
+  const isNewInputEnpty = newCommentText.length == 0;
 
   return (
     <Article>
