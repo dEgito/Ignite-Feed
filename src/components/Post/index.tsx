@@ -13,7 +13,7 @@ interface Author {
 }
 
 interface Content {
-  type: 'paragraph' | 'link';
+  type: string; // A sugestão era fazer assim `type?: 'paragraph' | 'link';` mas deu erro
   content: string;
 }
 
